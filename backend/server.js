@@ -15,10 +15,8 @@ connectDB()
 // Init Middleware
 app.use(express.json({ extended: false }));
 
-const corsOptions = {
-  origin: 'https://task-management-three-theta.vercel.app/'
-};
-app.use(cors(corsOptions));
+app.use(cors());
+
 
 // Define Routes
 app.use('/api/auth', require('./routes/auth'));
