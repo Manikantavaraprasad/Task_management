@@ -1,4 +1,5 @@
 // filepath: lib/api/tasks.ts
+NEXT_PUBLIC_API_URL=https://task-management-3aw8-rhxcazdtj.vercel.app/
 
 import axios from 'axios';
 
