@@ -16,7 +16,7 @@ connectDB()
 app.use(express.json({ extended: false }));
 
 const corsOptions = {
-  origin: 'http://localhost:3000'
+  origin: 'https://task-management-three-theta.vercel.app/'
 };
 app.use(cors(corsOptions));
 
