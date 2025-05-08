@@ -75,10 +75,14 @@ export default function Home() {
           setError(`Request failed with status: ${response.status}`);
         }
       }
-    } catch (err: any) {
-      setError('Failed to connect to the server');
-      console.error('Fetch error:', err);
-    } finally {
+    } catch (err) {
+  setError('Failed to connect to the server');
+  if (err instanceof Error) {
+    console.error('Fetch error:', err.message);
+  } else {
+    console.error('Unknown error:', err);
+  }
+} finally {
       setIsLoading(false); // End loading
     }
   };
