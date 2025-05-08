@@ -15,7 +15,15 @@ connectDB()
 // Init Middleware
 app.use(express.json({ extended: false }));
 
-app.use(cors());
+const corsOptions = {
+  origin: [
+    'https://task-management-rust-psi.vercel.app/'
+  ],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 
 
 // Define Routes
