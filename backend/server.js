@@ -24,6 +24,12 @@ app.use('/api/auth', require('./routes/auth'));
 // filepath: ./server.js
 app.use('/api/tasks', require('./routes/tasks'));
 
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
+
 app.get('/', (req, res) => {
   res.send({
     message: '✅ Task Management Backend is working properly!',
@@ -32,8 +38,3 @@ app.get('/', (req, res) => {
     date: new Date(),
   });
 });
-
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
