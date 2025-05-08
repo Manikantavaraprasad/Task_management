@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000', // Adjust if your backend is hosted elsewhere
+  baseURL: 'https://task-management-backend-rouj.onrender.com', // Adjust if your backend is hosted elsewhere
   headers: {
     'Content-Type': 'application/json'
   }
