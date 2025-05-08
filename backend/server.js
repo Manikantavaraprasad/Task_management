@@ -24,6 +24,14 @@ app.use('/api/auth', require('./routes/auth'));
 // filepath: ./server.js
 app.use('/api/tasks', require('./routes/tasks'));
 
+app.get('/', (req, res) => {
+  res.send({
+    message: '✅ Task Management Backend is working properly!',
+    status: 'success',
+    environment: process.env.NODE_ENV || 'development',
+    date: new Date(),
+  });
+});
 
 
 const PORT = process.env.PORT || 5000;
